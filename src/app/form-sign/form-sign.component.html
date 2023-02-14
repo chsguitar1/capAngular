@@ -1,22 +1,20 @@
-<div>
+<div class="container">
+  <my-input label="Nome:" (keyUp)="setNome($event)"></my-input>
 
-    <my-input label="Nome:"></my-input>
-    
-    <div>
-      <my-input label="Endereço:"></my-input>
-    </div>
-    
-    <div>
-      <my-input label="Cidade:"></my-input>
-    </div>
-    <!--  -->
-
-    <my-selector label="Cargo:" [values]="cargos"></my-selector>
+  <div>
+    <my-input label="Endereço:" (keyUp)="setEndereco($event)"></my-input>
   </div>
+
+  <div>
+    <my-input label="Cidade:" (keyUp)="setCidade($event)"></my-input>
+  </div>
+  <!--  -->
+
+  <my-selector label="Cargo:" [values]="cargos" (selectedValue)="setCargo($event)"></my-selector>
+
   <br />
   <br />
   <div>
-    <button>Enviar</button>
+    <button (click)="sendMessage()">Enviar</button>
   </div>
-
-
+</div>

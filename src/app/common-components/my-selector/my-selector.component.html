@@ -1,7 +1,7 @@
 <div>
     <label>{{label}}</label>
     <br>
-    <select>
+    <select (change)="onChange($event)">
         <option *ngFor="let item of values" [value]="item">{{item}}</option>
     </select>
 </div>
